@@ -1,0 +1,80 @@
+.footer {
+  background-color: $color-primary-green;
+  color: $color-light;
+  padding-left: $padding_sm;
+  padding-right: $padding_sm;
+  padding-top: $big-px;
+  padding-bottom: $big-px;
+  text-align: center;
+  
+  @media (min-width: $tablet) {
+    display: block;
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    align-items: center;
+  }
+  
+  &__contact {
+    margin-bottom: 20px;
+    display: none; // Don't show contact section in mobile devices
+
+    @media (min-width: $tablet) {
+      display: block; // Showing contact in tablet and desktop devices
+    }
+
+    @media (min-width: $desktop) {
+      padding-left: $padding_md;
+    }
+
+    &-link {
+      color: $color-light;
+      text-decoration: none;
+      transition: color 1s ease;
+
+      &:hover {
+        color: $color-dark;
+        text-decoration: underline;
+      }
+      
+      &--contrast {
+        color: $color-primary-green;
+      }
+    }
+  }
+  
+  &__title {
+    font-size: 1.2rem;
+    padding-top: $small-px;
+    padding-bottom: $small-px;
+    color: $color-light;
+  }
+  
+  &__social {
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: $desktop) {
+      padding-right: $padding_md;
+    }
+  
+    &-list {
+      font-size: 1.5rem;
+      display: flex;
+      gap: 10px;
+    }
+  
+    &-link {
+      color: $color-light;
+      transition: color 1s ease;
+
+      &:hover {
+        color: $color-dark;
+      }
+    }
+  }
+}
+  

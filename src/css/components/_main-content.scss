@@ -1,0 +1,8 @@
+.main-content {
+  border-left: $medium-px;
+  border-right: $medium-px;
+  @media (min-width: $tablet) {
+    border-left: $padding_bg;
+    border-right: $padding_bg;
+  }
+}
